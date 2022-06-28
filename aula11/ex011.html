@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nacionalidades</title>
+</head>
+<body>
+  <input type="text" id="pais" placeholder="Digite o país">
+  <input type="button" value="Verificar" onclick="verificarPais()">
+  <div id="res">
+
+  </div>
+  <script>
+    var res = document.getElementById('res')
+    function verificarPais() {
+      var p = document.getElementById('pais').value
+      res.innerHTML = `<p>Vivendo em ${p}</p>`
+      if (p == 'Brasil'){
+        res.innerHTML += '<p><strong>Brasileiro</strong></p>'
+      } else {
+        res.innerHTML += '<p><strong>Estrangeiro</strong></p>'
+      }
+    }
+  </script>
+</body>
+</html>
